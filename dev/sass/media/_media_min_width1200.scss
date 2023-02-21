@@ -1,0 +1,12 @@
+@media (min-width: 1200px) {
+    header {
+        .navbar-nav {
+            .nav-item {
+                margin-right: 30px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

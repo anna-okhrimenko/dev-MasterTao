@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $text-color;
+}
+
+body {
+    background: $backgr-color;
+    font-family: 'Proxima Nova Lt';
+}
+
+.container {
+    width: 100%;
+    max-width: 1164px;
+    padding: 0 12px;
+    margin: 0 auto;
+}
+
+.btn {
+    font-weight: 600;
+
+    &.btn-primary {
+        background: $primary-color;
+        border-color: $primary-color;
+        border-radius: 90px;
+        font-size: 15px;
+        padding: 14px 27px;
+        border: none;
+        &:focus {
+            box-shadow: none;
+        }
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+}

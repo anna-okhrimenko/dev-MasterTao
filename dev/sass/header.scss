@@ -1,0 +1,88 @@
+header {
+	padding: 25px 0 39px;
+
+	.navbar {
+		padding: 0;
+		.navbar-nav {
+			margin: 0 auto;
+	
+			.nav-link {
+				font-weight: 400;
+				font-size: 16px;
+				color: $text-color;
+	
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+}
+
+.header-logo {
+	display: inline-block;
+}
+
+.navbar-toggler {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+
+	&:focus {
+		box-shadow: none;
+	}
+
+	&[aria-expanded="true"] {		
+		span {
+			background-color: transparent;
+		}
+	
+		span:before,
+		span:after {
+			top: 0;
+		}
+	
+		span:before {
+			transform: rotate(135deg);
+		}
+	
+		span:after {
+			transform: rotate(-135deg);
+		}
+	}
+
+	span,
+	span:before,
+	span:after {
+		cursor: pointer;
+		border-radius: 1px;
+		height: 2px;
+		width: 35px;
+		background: $text-color;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		display: block;
+		content: '';
+	}
+
+	span:before {
+		top: -10px;
+	}
+
+	span:after {
+		top: 10px;
+	}
+
+	span,
+	span:before,
+	span:after {
+		transition: all 0.5s ease-in-out;
+	}
+	
+	
+	
+}
