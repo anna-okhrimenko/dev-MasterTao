@@ -53,3 +53,13 @@
 
     }
 }
+
+.slick-next {
+    right: calc((100% - 1180px) / 4);
+    
+}
+
+.slick-prev {
+    left: calc((100% - 1180px) / 4);
+    z-index: 1;
+}
