@@ -31,3 +31,25 @@
     margin-bottom: 37px;
     max-width: 345px;
 }
+
+.slick-dots {
+    bottom: 43px;
+}
+
+
+.slick-dots li {
+    button:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        opacity: 1;
+        border: 2px white solid;
+        border-radius: 50%;
+    }
+    &.slick-active {
+        button:before {
+            background-color: white;
+        }
+
+    }
+}
