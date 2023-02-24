@@ -50,6 +50,28 @@
         }
        
     }
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    .slide-item_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slide-item_title, .slide-item_subtitle {
+        text-align: center;
+    }
+
+    .slick-list {
+        border-radius: 0;
+        
+    }
+    .slick-next, .slick-prev {
+        display: none !important;
+    }
 }
 
 
