@@ -1,3 +1,33 @@
-h1 {
-    color: blue;
+
+.slick-list {
+    border-radius: 20px;
+}
+
+.slide-item {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 170px 12px 60px;
+    
+    .container {
+        min-height: 470px;
+    }
+}
+
+
+.slide-item_title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 126%;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    max-width: 463px;
+}
+
+.slide-item_subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 135.5%;
+    margin-bottom: 37px;
+    max-width: 345px;
 }

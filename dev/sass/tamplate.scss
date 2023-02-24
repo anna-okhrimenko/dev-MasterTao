@@ -34,4 +34,18 @@ body {
             background-color: $secondary-color;
         }
     }
+    &.btn-large {
+        min-width: 293px;
+        display: flex;
+        justify-content: space-between;
+        padding: 22px 22px 22px 33px;
+        font-size: 16px;
+    }
+}
+
+.container-fluid {
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 50px;
+    margin: 0 auto;
 }
