@@ -54,7 +54,12 @@
     .container-fluid {
         padding: 0;
     }
-   
+
+    .slide-item {
+        height: calc(100vh - 72px);
+        padding: 187px 12px 60px;
+    }
+
     .slide-item_content {
         display: flex;
         flex-direction: column;

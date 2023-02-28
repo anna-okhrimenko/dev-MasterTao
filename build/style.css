@@ -281,6 +281,10 @@ header .navbar .navbar-nav .nav-link:hover {
   .container-fluid {
     padding: 0;
   }
+  .slide-item {
+    height: calc(100vh - 72px);
+    padding: 187px 12px 60px;
+  }
   .slide-item_content {
     display: flex;
     flex-direction: column;
@@ -310,12 +314,11 @@ header .navbar .navbar-nav .nav-link:hover {
   }
   .slide-item_subtitle {
     font-size: 16px;
-    margin: 0 auto 18px;
   }
 }
 @media screen and (max-width: 575px) {
   .slide-item .container {
-    padding: 0 20px;
+    padding: 0 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
