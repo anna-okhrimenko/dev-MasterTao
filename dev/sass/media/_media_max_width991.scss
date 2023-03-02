@@ -55,6 +55,7 @@
         padding: 0;
     }
 
+    // slick-slide navigation //
     .slide-item {
         height: calc(100vh - 72px);
         padding: 187px 12px 60px;
@@ -89,6 +90,29 @@
         
     }
     
+    // about-section //
+
+    .about {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .about-text {
+        margin: 0 0 25px 0;
+    }
+
+    .about-text p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 149.5%;
+        text-align: justify;
+    }
+
+    .about-img img {
+        max-width: 325px;
+    }
 }
 
 

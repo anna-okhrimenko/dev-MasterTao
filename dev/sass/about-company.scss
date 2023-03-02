@@ -1,9 +1,18 @@
 .about {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .about-text {
     max-width: 555px;
+    margin-right: 35px;
+}
+
+.about-text p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 170%;
+}
+
+.about-img {
+    max-width: 550px;
 }

@@ -1,0 +1,33 @@
+.cooperation-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    div {
+        margin-bottom: 45px;
+        &:nth-child(odd) {
+            margin-right: 50px;
+        }
+    }
+   
+}
+
+.cooperation-text {
+    max-width: 525px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 156.5%;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 40px;
+            &::before {
+                content: '•';
+                margin-right: 7px;
+            }
+        }
+    }
+}

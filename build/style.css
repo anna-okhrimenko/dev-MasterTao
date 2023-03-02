@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: CustomTheme
 Theme URI: https://wordpress.org/themes/CustomTheme/
@@ -62,6 +63,11 @@ body {
   padding: 0 50px;
   margin: 0 auto;
   margin-bottom: 95px;
+}
+
+.grey-bg-container {
+  background-color: #363A4D;
+  border-radius: 20px;
 }
 
 header {
@@ -240,12 +246,51 @@ ul.slick-dots button:focus {
 
 .about {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .about-text {
   max-width: 555px;
+  margin-right: 35px;
+}
+
+.about-text p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 170%;
+}
+
+.about-img {
+  max-width: 550px;
+}
+
+.cooperation-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cooperation-content div {
+  margin-bottom: 45px;
+}
+.cooperation-content div:nth-child(odd) {
+  margin-right: 50px;
+}
+
+.cooperation-text {
+  max-width: 525px;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 156.5%;
+}
+.cooperation-text ul {
+  list-style: none;
+  padding: 0;
+}
+.cooperation-text ul li {
+  margin-bottom: 40px;
+}
+.cooperation-text ul li::before {
+  content: "•";
+  margin-right: 7px;
 }
 
 @media (min-width: 992px) {
@@ -267,6 +312,9 @@ ul.slick-dots button:focus {
 @media screen and (max-width: 1199px) {
   .container-fluid {
     padding: 0 30px;
+  }
+  .about-img img {
+    max-width: 450px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -333,6 +381,24 @@ ul.slick-dots button:focus {
   .btn.btn-large {
     min-width: 295px;
     margin: 0 auto;
+  }
+  .about {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .about-text {
+    margin: 0 0 25px 0;
+  }
+  .about-text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 149.5%;
+    text-align: justify;
+  }
+  .about-img img {
+    max-width: 325px;
   }
 }
 @media screen and (max-width: 767px) {
