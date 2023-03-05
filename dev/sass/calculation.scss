@@ -1,0 +1,22 @@
+.calculation {
+    padding: $section-padding;
+}
+
+.form-container {
+    max-width: 626px;
+}
+
+.form-calculation {
+    background-color: $second-backgr-color;
+    border-radius: 20px;
+    padding: 50px;
+    .row {
+        margin: 0 -15px;
+    }
+    .col-md-6 {
+        padding: 0 15px;
+    }
+    .btn.btn-large {
+        min-width: 253px;
+    }
+}

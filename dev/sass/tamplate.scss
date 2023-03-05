@@ -48,11 +48,136 @@ body {
     max-width: 1920px;
     padding: 0 50px;
     margin: 0 auto;
-    margin-bottom: $section-mb;
+    margin-bottom: $section-padding;
 }
 
 .grey-bg-container {
     background-color: $second-backgr-color;
     border-radius: 20px;
-    padding-bottom: 53px;
+    padding: $section-padding;
 }
+
+
+.template-title {
+    line-height: 125%;
+    text-align: center;
+    position: relative;
+    margin-bottom: $title-margin;
+
+    h2 {
+        font-weight: 700;
+        font-size: 36px;
+        text-transform: uppercase;
+    }
+
+    h5 {
+        font-weight: 300;
+        font-size: 24px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: -19px;
+        height: 2px;
+        width: 85px;
+        background-color: $primary-color;
+        display: block
+
+    }
+
+    &.after-green {
+        &::after {
+            background-color: $secondary-color;
+        }
+        
+    }
+    
+}
+
+.template-title-left {
+    @extend.template-title;
+    text-align: left;
+    &::after {
+        left: 0;
+        transform: translate(0, 0);
+    }
+
+    &.after-green {
+        &::after {
+            background-color: $secondary-color;
+        }
+        
+    }
+    
+}
+
+.after-inline {
+    > &::after {
+        display: none;
+    }
+
+    h2 {
+        &::after {
+            content: "";
+            height: 2px;
+            width: 85px;
+            background-color: $primary-color;
+            display: inline-block;
+            margin: 0 0 10px 20px;
+            
+        }
+    }
+    &.after-green {
+        h2 {
+            &::after {
+                background-color: $secondary-color;
+            }
+        }
+        
+    }
+
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 126%;
+    margin-bottom: 6px;
+}
+
+input {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 18px 20px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 126%;
+    border: 1px solid #FFFFFF;
+    color: black;
+    width: 100%;
+    
+   
+    &::placeholder {
+        transition: .3s;
+        color: #CBCBCB;
+    }
+
+    &:focus {
+        box-shadow: 0px 1px 13px 3px rgb(194 178 178 / 56%);
+        &::placeholder {
+            color: transparent;
+        }
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+}
+
