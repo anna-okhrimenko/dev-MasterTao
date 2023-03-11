@@ -12,3 +12,13 @@ $(document).ready(function () {
         ]
     })
 });
+
+
+const btnBox = document.querySelectorAll('.btn-box');
+btnBox.forEach(item => {
+  item.closest('.col-md-6').classList.add('button-group');
+});
+
+document.getElementById('fileInput').onchange = function () {
+  document.getElementById('file-name').innerHTML = this.files[0].name;
+};
