@@ -1,3 +1,17 @@
+@media screen and (max-width: 1299px) {
+    .calculation {
+        overflow: hidden;
+    }
+    .form-container {
+        .img-box {
+            right: 56px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1199px) {
     .container-fluid {
         padding: 0 30px;
@@ -10,6 +24,12 @@
     .cooperation-picture {
         max-width: 500px;
     
+    }
+
+    .form-container {
+        .img-box {
+            right: 20px;
+        }
     }
 
    
