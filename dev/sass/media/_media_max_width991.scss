@@ -39,7 +39,9 @@
         display: flex;
         flex-direction: column;
         background-color: $second-backgr-color;
-        margin: 15px -20px 0;
+        margin: 15px -20px -18px;
+        box-shadow: 14px 22px 40px rgba(30, 35, 66, 0.28);
+        z-index: 1;
 
         .btn { 
             margin-bottom: 60px;
@@ -154,12 +156,56 @@
 
     //calculation//
    
-
+    .form-calculation {
+        padding: 52px 30px 34px;
+    }
     
-
+    .form-container {
+        justify-content: center;
+        .img-box {
+            display: none;
+        }
+    }
     
+    //advantages//
 
+    .advantages-img {
+        margin: 10px 0 22px;
+    }
+
+    //templates//
+
+    .template-title,
+    .template-title-left {
+        max-width: auto;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .template-subtitle {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .after-inline {
+        h2 {
+            &::after {
+                content: "";
+                display: block;
+                margin: 0 0 10px 20px;
+                
+            }
+        }
+        &.after-green {
+            h2 {
+                &::after {
+                    background-color: $secondary-color;
+                }
+            }
+            
+        }
     
+    }
 
     
 }

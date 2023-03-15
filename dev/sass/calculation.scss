@@ -1,15 +1,30 @@
 .calculation {
     padding: $section-padding;
+    
+    .template-title-left {
+        max-width: 626px;
+    }
 }
 
 .form-container {
-    max-width: 626px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    .img-box {
+        position: absolute;
+        bottom: -100px;
+        right: -56px;
+        width: Min(40vw,625px);
+       
+    }
+    
 }
 
 .form-calculation {
     background-color: $second-backgr-color;
     border-radius: 20px;
-    padding: 50px;
+    padding: 50px 50px 60px;
+    max-width: 626px;
     .row {
         margin: 0 -15px;
     }
@@ -58,3 +73,4 @@
     cursor: pointer;
 
 }
+

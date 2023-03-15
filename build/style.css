@@ -63,13 +63,13 @@ body {
   max-width: 1920px;
   padding: 0 50px;
   margin: 0 auto;
-  margin-bottom: 90px 0 100px;
+  margin-bottom: 90px 12px 100px;
 }
 
 .grey-bg-container {
   background-color: #363A4D;
   border-radius: 20px;
-  padding: 90px 0 100px;
+  padding: 90px 12px 100px;
 }
 
 .template-title, .template-title-left {
@@ -324,7 +324,8 @@ ul.slick-dots {
   margin-bottom: 43px;
   position: absolute;
   top: calc(100% - 48px);
-  left: calc(50% - 120px);
+  left: 50%;
+  transform: translate(-50%);
 }
 
 ul.slick-dots li {
@@ -346,7 +347,7 @@ ul.slick-dots button:hover {
   background-color: #89C249;
 }
 ul.slick-dots button:focus {
-  background-color: #E58D35;
+  background-color: #ffffff;
 }
 
 .slider-arrows {
@@ -382,17 +383,29 @@ ul.slick-dots button:focus {
 }
 
 .calculation {
-  padding: 90px 0 100px;
+  padding: 90px 12px 100px;
+}
+.calculation .template-title-left {
+  max-width: 626px;
 }
 
 .form-container {
-  max-width: 626px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.form-container .img-box {
+  position: absolute;
+  bottom: -100px;
+  right: -56px;
+  width: min(40vw, 625px);
 }
 
 .form-calculation {
   background-color: #363A4D;
   border-radius: 20px;
-  padding: 50px;
+  padding: 50px 50px 60px;
+  max-width: 626px;
 }
 .form-calculation .row {
   margin: 0 -15px;
@@ -439,8 +452,50 @@ ul.slick-dots button:focus {
   cursor: pointer;
 }
 
+.advantage {
+  text-align: center;
+  margin-bottom: 58px;
+  padding: 0 27px;
+}
+.advantage-img {
+  width: 93px;
+  height: 93px;
+  padding: 15px;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #89C249;
+  border-radius: 50%;
+  object-fit: scale-down;
+}
+.advantage-img::before {
+  content: "";
+  position: absolute;
+  max-width: 113px;
+  min-width: 113px;
+  width: 100%;
+  height: 113px;
+  border: 1px solid #6C7188;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.advantage-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 124.5%;
+}
+
+#slider-advantages {
+  margin: 90px 0 -58px;
+}
+
 .about {
   display: flex;
+  margin: 90px 12px 100px;
 }
 
 .about-text {
@@ -501,6 +556,9 @@ ul.slick-dots button:focus {
   header .navbar-nav .nav-item:last-child {
     margin-right: 0;
   }
+  .form-calculation {
+    min-width: 626px;
+  }
 }
 @media (min-width: 1200px) {
   header .navbar-nav .nav-item {
@@ -508,6 +566,17 @@ ul.slick-dots button:focus {
   }
   header .navbar-nav .nav-item:last-child {
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 1299px) {
+  .calculation {
+    overflow: hidden;
+  }
+  .form-container .img-box {
+    right: 56px;
+  }
+  .form-container .img-box img {
+    width: 100%;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -519,6 +588,9 @@ ul.slick-dots button:focus {
   }
   .cooperation-picture {
     max-width: 500px;
+  }
+  .form-container .img-box {
+    right: 20px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -548,7 +620,9 @@ ul.slick-dots button:focus {
     display: flex;
     flex-direction: column;
     background-color: #363A4D;
-    margin: 15px -20px 0;
+    margin: 15px -20px -18px;
+    box-shadow: 14px 22px 40px rgba(30, 35, 66, 0.28);
+    z-index: 1;
   }
   .navbar-collapse .btn {
     margin-bottom: 60px;
@@ -634,6 +708,36 @@ ul.slick-dots button:focus {
   .cooperation-text.text-second-block {
     margin-bottom: 29px;
     margin-right: 0;
+  }
+  .form-calculation {
+    padding: 52px 30px 34px;
+  }
+  .form-container {
+    justify-content: center;
+  }
+  .form-container .img-box {
+    display: none;
+  }
+  .advantages-img {
+    margin: 10px 0 22px;
+  }
+  .template-title,
+  .template-title-left {
+    max-width: auto;
+    text-align: center;
+    font-size: 24px;
+  }
+  .template-subtitle {
+    text-align: center;
+    font-size: 16px;
+  }
+  .after-inline h2::after {
+    content: "";
+    display: block;
+    margin: 0 0 10px 20px;
+  }
+  .after-inline.after-green h2::after {
+    background-color: #89C249;
   }
 }
 @media screen and (max-width: 767px) {

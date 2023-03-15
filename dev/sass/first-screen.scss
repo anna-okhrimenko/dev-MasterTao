@@ -45,7 +45,8 @@ ul.slick-dots {
     margin-bottom: 43px;
     position: absolute;
     top: calc(100% - 48px);
-    left: calc(50% - 120px);
+    left: 50%;
+    transform: translate(-50%);
         
 }
 
@@ -70,7 +71,7 @@ ul.slick-dots button {
         }
 
         &:focus {
-            background-color: $primary-color;
+            background-color: $text-color;
         }
 }
 
