@@ -64,6 +64,7 @@ body {
     text-align: center;
     position: relative;
     margin-bottom: $title-margin;
+    --animate-duration: 2s;
 
     h2 {
         font-weight: 700;

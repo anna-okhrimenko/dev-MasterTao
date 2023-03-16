@@ -187,8 +187,15 @@
     
     //advantages//
 
-    .advantages-img {
-        margin: 10px 0 22px;
+    .advantages {
+        margin: 15px 0 -18px;
+        .grey-bg-container {
+            border-radius: 0%;
+        }
+    }
+
+    .advantage {
+        padding: 10px 27px;
     }
 
     //templates//

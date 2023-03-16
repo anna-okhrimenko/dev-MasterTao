@@ -77,6 +77,7 @@ body {
   text-align: center;
   position: relative;
   margin-bottom: 60px;
+  --animate-duration: 2s;
 }
 .template-title h2, .template-title-left h2 {
   font-weight: 700;
@@ -329,7 +330,7 @@ ul.slick-dots {
 }
 
 ul.slick-dots li {
-  margin: 0 26px;
+  margin: 0 13px;
   list-style: none;
   line-height: 8px;
 }
@@ -356,7 +357,7 @@ ul.slick-dots button:focus {
   justify-content: space-between;
   width: 100%;
   max-width: 1723px;
-  padding: 50px;
+  padding: 0 50px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -461,7 +462,7 @@ ul.slick-dots button:focus {
   width: 93px;
   height: 93px;
   padding: 15px;
-  margin: 0 auto 22px;
+  margin: 0 auto 31px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -487,6 +488,7 @@ ul.slick-dots button:focus {
   font-weight: 400;
   font-size: 18px;
   line-height: 124.5%;
+  margin-bottom: 48px;
 }
 
 #slider-advantages {
@@ -735,8 +737,14 @@ ul.slick-dots button:focus {
   .form-container .img-box {
     display: none;
   }
-  .advantages-img {
-    margin: 10px 0 22px;
+  .advantages {
+    margin: 15px 0 -18px;
+  }
+  .advantages .grey-bg-container {
+    border-radius: 0%;
+  }
+  .advantage {
+    padding: 10px 27px;
   }
   .template-title h2,
   .template-title-left h2 {

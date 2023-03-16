@@ -1,3 +1,5 @@
+new WOW().init();
+
 $(document).ready(function () {
     $('.slider').slick({
         dots: true,
@@ -50,3 +52,35 @@ btnBox.forEach(item => {
 document.getElementById('fileInput').onchange = function () {
   document.getElementById('file-name').innerHTML = this.files[0].name;
 };
+
+const elements = document.querySelectorAll('.animate-title');
+elements.forEach((element) => {
+  element.classList.add('animate__animated', 'wow');
+  if (element.classList.contains('template-title-left')) {
+    element.classList.add('animate__fadeInTopLeft');
+  } else {
+    element.classList.add('animate__fadeInUp');
+  }
+});
+
+const navLinks = document.querySelectorAll('.nav-link[data-goto]');
+if (navLinks.length > 0) {
+  navLinks.forEach(navLink => {
+    navLink.addEventListener("click", onNavLinkClick);
+  });
+  function onNavLinkClick(e) {
+    const navLink = e.target;
+    const dataGoto = navLink.dataset.goto;
+    if (dataGoto && document.querySelectorAll(dataGoto)){
+      const gotoBlock = document.querySelector(dataGoto);
+      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY;
+
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: "smooth"
+      });
+      e.preventDefault();
+    }
+  }
+}
+

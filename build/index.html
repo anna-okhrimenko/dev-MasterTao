@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/stylesheet.css">
     <link rel="stylesheet" href="assets/css/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -27,19 +28,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Цены и сроки</a>
+                            <a data-goto=".calculation" class="nav-link" href="#">Цены и сроки</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Услуги</a>
+                            <a data-goto=".cooperation" class="nav-link" href="#">Услуги</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">О компании</a>
+                            <a data-goto=".about" class="nav-link" href="#">О компании</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Контакты</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Оформить груз</a>
+                            <a data-goto="advantages" class="nav-link" href="#">Оформить груз</a>
                         </li>
 
                     </ul>
@@ -88,7 +89,7 @@
         </section>
         <section class="calculation">
             <div class="container">
-                <div class="template-title-left after-inline after-green">
+                <div class="template-title-left after-inline after-green animate-title">
                     <h2 >Получить рассчет стоимости доставки вашего груза</h2>
                 </div>
                 <div class="form-container">
@@ -161,7 +162,7 @@
         <section class="advantages container-fluid">
             <div class="grey-bg-container">
                 <div class="container">
-                    <div class="template-title">
+                    <div class="template-title animate-title">
                         <h2>Почему стоит выбрать именно нас?</h2>
                     </div>
                     <div id="slider-advantages" class="row">
@@ -239,7 +240,7 @@
             <div class="container">
                 <div class="about">
                     <div class="about-info">
-                        <div class="template-title-left after-green">
+                        <div class="template-title-left after-green animate-title">
                             <h2>
                         О компании
                     </h2>
@@ -263,10 +264,10 @@
                 </div>
             </div>
         </section>
-        <section class="container-fluid ">
+        <section class="container-fluid cooperation">
             <div class="grey-bg-container">
                 <div class="container">
-                    <div class="template-title after-green">
+                    <div class="template-title after-green animate-title">
                         <h2 >
                     Готовы к сотрудничеству?
                 </h2>
@@ -330,6 +331,7 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery-3.6.3.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/wow.js"></script>
     <script src="assets/js/custom.js"></script>
 </body>
 
