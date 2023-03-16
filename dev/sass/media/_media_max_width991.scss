@@ -61,12 +61,24 @@
     .slide-item {
         height: calc(100vh - 72px);
         padding: 187px 12px 60px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            background: linear-gradient(to right, rgba(4, 5, 17, 0.072), rgba(4, 5, 17, 0.084) 100%);
+        }
     }
 
     .slide-item_content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        z-index: 2;
+        position: relative;
     }
 
     .slide-item_title {
@@ -155,6 +167,12 @@
     }
 
     //calculation//
+
+    .calculation .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
    
     .form-calculation {
         padding: 52px 30px 34px;
@@ -175,8 +193,8 @@
 
     //templates//
 
-    .template-title,
-    .template-title-left {
+    .template-title h2,
+    .template-title-left h2 {
         max-width: auto;
         text-align: center;
         font-size: 24px;
@@ -187,24 +205,38 @@
         font-size: 16px;
     }
 
-    .after-inline {
-        h2 {
-            &::after {
-                content: "";
-                display: block;
-                margin: 0 0 10px 20px;
-                
-            }
-        }
-        &.after-green {
-            h2 {
-                &::after {
-                    background-color: $secondary-color;
-                }
-            }
+    .template-title-left {
+        &::after {
+            margin: 0 0 10px 0;
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: -22px;
+            height: 2px;
+            width: 85px;
+            display: block;
             
         }
     
+    }
+
+    .after-inline h2 {
+        font-size: 24px;
+        line-height: 124.5%;
+        &::after {
+            margin: 0 0 10px 0;
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: -22px;
+            height: 2px;
+            width: 85px;
+            display: block;
+            
+        }
+
     }
 
     
