@@ -8,7 +8,7 @@ $(document).ready(function () {
             {
               breakpoint: 991,
               settings: {
-                arrows: false
+              arrows: false
               }
             }
         ]
@@ -41,6 +41,26 @@ $(document).ready(function () {
         }
       });
     }
+
+    $('.multiple-slider').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            arrows: false,
+          }
+        }
+      ]
+    });
 });
 
 
@@ -53,6 +73,8 @@ document.getElementById('fileInput').onchange = function () {
   document.getElementById('file-name').innerHTML = this.files[0].name;
 };
 
+//анимация заголовков//
+
 const elements = document.querySelectorAll('.animate-title');
 elements.forEach((element) => {
   element.classList.add('animate__animated', 'wow');
@@ -62,6 +84,8 @@ elements.forEach((element) => {
     element.classList.add('animate__fadeInUp');
   }
 });
+
+//переход по ссылке в хедере на секцию//
 
 const navLinks = document.querySelectorAll('.nav-link[data-goto]');
 if (navLinks.length > 0) {

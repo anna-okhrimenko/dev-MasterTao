@@ -19,13 +19,13 @@ body {
 
 .btn {
     font-weight: 600;
+    border-radius: 90px;
+    font-size: 15px;
+    padding: 14px 27px;
 
     &.btn-primary {
         background: $primary-color;
         border-color: $primary-color;
-        border-radius: 90px;
-        font-size: 15px;
-        padding: 14px 27px;
         border: none;
         &:focus {
             box-shadow: none;
@@ -34,6 +34,7 @@ body {
             background-color: $secondary-color;
         }
     }
+
     &.btn-large {
         min-width: 293px;
         display: flex;
@@ -42,20 +43,29 @@ body {
         padding: 22px 22px 22px 33px;
         font-size: 16px;
     }
+
+    &.btn-secondary {
+        color: #ffff;
+        border-color: $primary-color;
+        background-color: transparent;
+        &:hover {
+            background-color: $secondary-color;
+            border-color: $secondary-color;
+        }
+    }
 }
 
 .container-fluid {
     width: 100%;
     max-width: 1920px;
-    padding: 0 50px;
+    padding: 0 50px 50px;
     margin: 0 auto;
-    margin-bottom: $section-padding;
 }
 
 .grey-bg-container {
+    @extend.container-fluid;
     background-color: $second-backgr-color;
     border-radius: 20px;
-    padding: $section-padding;
 }
 
 
@@ -64,7 +74,7 @@ body {
     text-align: center;
     position: relative;
     margin-bottom: $title-margin;
-    --animate-duration: 2s;
+    padding-top: $title-margin;
 
     h2 {
         font-weight: 700;
