@@ -19,6 +19,13 @@
             margin: 0 -15px;
         }
     }
+
+    ul.slick-dots {
+        position: static;
+        margin: 32px auto;
+        transform: none;        
+            
+    }
     
 }
 
@@ -85,12 +92,15 @@
         margin: 0 -7px;
         display: flex;
     }
+
     .btn {
         padding-left: 16px;
         padding-right: 16px;
         width: 100%;
         max-width: 153px;
+        min-width: 153px;
         margin: 0 7px;
+        white-space: nowrap;
     }
 
 

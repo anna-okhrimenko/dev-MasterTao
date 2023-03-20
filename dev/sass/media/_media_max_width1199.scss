@@ -1,3 +1,9 @@
+@media screen and (max-width: 1539px) {
+    .multiple-slider {
+        max-width: 931px;
+    }
+}
+
 @media screen and (max-width: 1299px) {
     .calculation {
         overflow: hidden;
@@ -33,4 +39,20 @@
     }
 
    
+}
+
+@media screen and (max-width: 1130px) {
+    .multiple-slider {
+        max-width: 542px;
+    }
+
+    .multiple-slider-item {
+        .btn {
+            padding-left: 10px;
+            padding-right: 10px;
+            max-width: 138px;
+            min-width: 138px;
+           
+        }
+    }
 }

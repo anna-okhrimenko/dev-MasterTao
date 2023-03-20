@@ -1,66 +1,88 @@
 new WOW().init();
 
 $(document).ready(function () {
-    $('.slider').slick({
-        dots: true,
-        appendArrows: $('.slider-arrows'),
-        responsive: [
-            {
-              breakpoint: 991,
-              settings: {
-              arrows: false
-              }
-            }
-        ]
-    })
-
-    mobileOnlySlider("#slider-advantages", true, false, 991);
-
-    function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
-      var slider = $($slidername);
-      var settings = {
-        mobileFirst: true,
-        dots: $dots,
-        arrows: $arrows,
-        responsive: [
-          {
-            breakpoint: $breakpoint,
-            settings: "unslick"
-          }
-        ]
-      };
-    
-      slider.slick(settings);
-    
-      $(window).on("resize", function () {
-        if ($(window).width() > $breakpoint) {
-          return;
+  $('.slider').slick({
+    dots: true,
+    appendArrows: $('.slider-arrows'),
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          arrows: false
         }
-        if (!slider.hasClass("slick-initialized")) {
-          return slider.slick(settings);
-        }
-      });
-    }
+      }
+    ]
+  })
 
-    $('.multiple-slider').slick({
-      dots: false,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 3,
-      slidesToScroll: 1,
+  mobileOnlySlider("#slider-advantages", true, false, 991);
+
+  function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
+    var slider = $($slidername);
+    var settings = {
+      mobileFirst: true,
+      dots: $dots,
+      arrows: $arrows,
       responsive: [
         {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true,
-            arrows: false,
-          }
+          breakpoint: $breakpoint,
+          settings: "unslick"
         }
       ]
+    };
+
+    slider.slick(settings);
+
+    $(window).on("resize", function () {
+      if ($(window).width() > $breakpoint) {
+        return;
+      }
+      if (!slider.hasClass("slick-initialized")) {
+        return slider.slick(settings);
+      }
     });
+  }
+
+  $('.multiple-slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1540,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: false,
+          arrows: true,
+        }
+      },
+      {
+        breakpoint: 1131,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: true,
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+
 });
 
 
@@ -95,7 +117,7 @@ if (navLinks.length > 0) {
   function onNavLinkClick(e) {
     const navLink = e.target;
     const dataGoto = navLink.dataset.goto;
-    if (dataGoto && document.querySelectorAll(dataGoto)){
+    if (dataGoto && document.querySelectorAll(dataGoto)) {
       const gotoBlock = document.querySelector(dataGoto);
       const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY;
 

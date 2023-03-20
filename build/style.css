@@ -391,7 +391,7 @@ ul.slick-dots button:focus {
 }
 
 .calculation {
-  padding: 90px 12px 100px;
+  padding: 50px 12px 100px;
 }
 .calculation .template-title-left {
   max-width: 626px;
@@ -499,7 +499,7 @@ ul.slick-dots button:focus {
 }
 
 #slider-advantages {
-  margin: 90px 0 -58px;
+  margin: 90px 0 0px;
 }
 
 .delivery-item.multiple-slider-item__img {
@@ -527,6 +527,11 @@ ul.slick-dots button:focus {
 }
 .multiple-slider .slick-arrow.slick-list {
   margin: 0 -15px;
+}
+.multiple-slider ul.slick-dots {
+  position: static;
+  margin: 32px auto;
+  transform: none;
 }
 
 .multiple-slider-item {
@@ -590,12 +595,14 @@ ul.slick-dots button:focus {
   padding-right: 16px;
   width: 100%;
   max-width: 153px;
+  min-width: 153px;
   margin: 0 7px;
+  white-space: nowrap;
 }
 
 .about {
   display: flex;
-  margin: 90px 12px 100px;
+  margin-bottom: 50px;
 }
 
 .about-text {
@@ -668,6 +675,11 @@ ul.slick-dots button:focus {
     margin-right: 0;
   }
 }
+@media screen and (max-width: 1539px) {
+  .multiple-slider {
+    max-width: 931px;
+  }
+}
 @media screen and (max-width: 1299px) {
   .calculation {
     overflow: hidden;
@@ -691,6 +703,17 @@ ul.slick-dots button:focus {
   }
   .form-container .img-box {
     right: 20px;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .multiple-slider {
+    max-width: 542px;
+  }
+  .multiple-slider-item .btn {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 138px;
+    min-width: 138px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -732,7 +755,8 @@ ul.slick-dots button:focus {
     border: none;
   }
   .container-fluid, .grey-bg-container {
-    padding: 0;
+    border-radius: 0;
+    padding: 0 0 50px 0;
   }
   .slide-item {
     height: calc(100vh - 72px);
@@ -777,6 +801,9 @@ ul.slick-dots button:focus {
     justify-content: center;
     align-items: center;
     padding: 0;
+  }
+  .about-info {
+    margin-bottom: 25px;
   }
   .about-text {
     margin: 0 0 25px 0;
@@ -887,6 +914,10 @@ ul.slick-dots button:focus {
   }
   .slide-item_subtitle {
     font-size: 16px;
+  }
+  .multiple-slider {
+    padding: 0;
+    max-width: 360px;
   }
 }
 @media screen and (max-width: 575px) {

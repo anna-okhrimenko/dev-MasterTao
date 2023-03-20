@@ -54,7 +54,8 @@
     }
 
     .container-fluid {
-        padding: 0;
+        border-radius: 0;
+        padding: 0 0 50px 0;
     }
 
     // slick-slide navigation //
@@ -111,6 +112,10 @@
         justify-content: center;
         align-items: center;
         padding: 0;
+    }
+
+    .about-info {
+        margin-bottom: 25px;
     }
 
     .about-text {
