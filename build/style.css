@@ -70,7 +70,7 @@ body {
 .container-fluid, .grey-bg-container {
   width: 100%;
   max-width: 1920px;
-  padding: 0 50px 50px;
+  padding: 0 50px 90px 50px;
   margin: 0 auto;
 }
 
@@ -589,6 +589,7 @@ ul.slick-dots button:focus {
 .multiple-slider-item__buttons {
   margin: 0 -7px;
   display: flex;
+  justify-content: center;
 }
 .multiple-slider-item .btn {
   padding-left: 16px;
@@ -598,6 +599,32 @@ ul.slick-dots button:focus {
   min-width: 153px;
   margin: 0 7px;
   white-space: nowrap;
+}
+
+.services .services-slider_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
+  position: relative;
+}
+.services .services-slider_item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(4, 5, 17, 0.91) 0%, rgba(88, 88, 88, 0) 100%);
+  border-radius: 20px;
+}
+.services .services-slider_item div,
+.services .services-slider_item button {
+  z-index: 1;
+}
+.services p {
+  font-size: 14px;
+  line-height: 124.5%;
 }
 
 .about {
@@ -708,6 +735,7 @@ ul.slick-dots button:focus {
 @media screen and (max-width: 1130px) {
   .multiple-slider {
     max-width: 542px;
+    padding-bottom: 30px;
   }
   .multiple-slider-item .btn {
     padding-left: 10px;

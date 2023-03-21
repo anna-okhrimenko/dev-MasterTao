@@ -46,7 +46,7 @@ $(document).ready(function () {
     dots: false,
     arrows: true,
     infinite: true,
-    speed: 300,
+    speed: 900,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
