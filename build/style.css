@@ -162,6 +162,9 @@ input {
   color: black;
   width: 100%;
 }
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 input::placeholder {
   transition: 0.3s;
   color: #CBCBCB;
