@@ -60,7 +60,11 @@ ul.slick-dots li {
     list-style: none;
     line-height: 8px;
 
+    &.slick-active button {
+        background-color: white;
+    }
 }
+
 
 ul.slick-dots button {
     background: transparent;

@@ -161,9 +161,14 @@ input {
   border: 1px solid #FFFFFF;
   color: black;
   width: 100%;
+  /* Firefox */
 }
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }
 input::placeholder {
   transition: 0.3s;
@@ -180,11 +185,13 @@ input:focus-visible {
 }
 
 [type=checkbox] {
-  position: relative;
-  width: 0;
-  height: 0;
+  display: none;
 }
-[type=checkbox]::before {
+[type=checkbox] + label {
+  position: relative;
+  margin: 0 0 0 28px;
+}
+[type=checkbox] + label::before {
   content: "";
   background: #ffffff;
   border: 1px solid #282B38;
@@ -193,12 +200,8 @@ input:focus-visible {
   height: 24px;
   display: block;
   position: absolute;
-  left: 0;
-  top: -17px;
-}
-[type=checkbox] + label {
-  position: relative;
-  margin: 0 0 0 28px;
+  left: -32px;
+  top: -3px;
 }
 [type=checkbox] + label::after {
   content: "";
@@ -343,6 +346,9 @@ ul.slick-dots li {
   margin: 0 13px;
   list-style: none;
   line-height: 8px;
+}
+ul.slick-dots li.slick-active button {
+  background-color: white;
 }
 
 ul.slick-dots button {

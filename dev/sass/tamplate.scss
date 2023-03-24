@@ -179,17 +179,17 @@ input {
     border: 1px solid #FFFFFF;
     color: black;
     width: 100%;
-    
+
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
         -webkit-appearance: none;
-    
-}
+        margin: 0;
+    }
 
-input[type='number'] {
-    -moz-appearance: textfield;
-}
-    
+    /* Firefox */
+    &[type=number] {
+        -moz-appearance: textfield;
+    }
    
     &::placeholder {
         transition: .3s;
@@ -210,27 +210,25 @@ input[type='number'] {
 }
 
 [type="checkbox"] {
-    position: relative;
-    width: 0;
-    height: 0;
+    display: none;
 
-    &::before {
-        content: "";
-        background: $text-color;
-        border: 1px solid $backgr-color;
-        border-radius: 4px;
-        width: 24px;
-        height: 24px;
-        display: block;
-        position: absolute;
-        left: 0;
-        top: -17px;
-    }
     
     + label {
         position: relative;
         margin: 0 0 0 28px;
-       
+        
+        &::before {
+            content: "";
+            background: $text-color;
+            border: 1px solid $backgr-color;
+            border-radius: 4px;
+            width: 24px;
+            height: 24px;
+            display: block;
+            position: absolute;
+            left: -32px;
+            top: -3px;
+        }
         
         &::after {
             content: "";
@@ -255,6 +253,3 @@ input[type='number'] {
         }
     }
 }
-
-
-
