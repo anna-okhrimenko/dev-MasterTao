@@ -179,10 +179,15 @@ input {
     border: 1px solid #FFFFFF;
     color: black;
     width: 100%;
-
+    
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+        -webkit-appearance: none;
+    
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
 }
     
    
