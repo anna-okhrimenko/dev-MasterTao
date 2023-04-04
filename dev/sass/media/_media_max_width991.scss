@@ -107,7 +107,7 @@
     
     // about-section //
 
-    .about {
+    .about-content {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -249,6 +249,11 @@
             
         }
 
+    }
+
+    .footer-contacts {
+        margin: auto;
+        text-align: center;
     }
 
     

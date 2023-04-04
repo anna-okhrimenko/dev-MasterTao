@@ -58,14 +58,18 @@ body {
 .container-fluid {
     width: 100%;
     max-width: 1920px;
-    padding: 0 50px 90px 50px;
+    padding: 0 50px 100px 50px;
     margin: 0 auto;
 }
 
 .grey-bg-container {
-    @extend.container-fluid;
     background-color: $second-backgr-color;
     border-radius: 20px;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 50px 100px 50px;
+    margin: 0 auto;
+    
 }
 
 
@@ -169,7 +173,7 @@ label {
     margin-bottom: 6px;
 }
 
-input {
+input, textarea {
     background: #FFFFFF;
     border-radius: 10px;
     padding: 18px 20px;

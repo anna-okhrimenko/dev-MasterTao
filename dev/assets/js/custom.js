@@ -130,3 +130,40 @@ if (navLinks.length > 0) {
   }
 }
 
+
+const media = {
+  queryList: {
+    mobile: window.matchMedia('(min-width: 0px) and (max-width: 768px)'),
+    tablet: window.matchMedia('(min-width: 768px) and (max-width: 992px)'),
+    desktop: window.matchMedia('(min-width: 992px)'),
+  },
+  queryIf(func, type) {
+    if (this.queryList[type].matches) func();
+  },
+  query(type, func) {
+    this.queryIf(func, type);
+    this.queryList[type].addEventListener('change', () => this.queryIf(func, type));
+  },
+};
+
+const removeBlock = document.querySelectorAll('.block-remove_responsiv')
+removeBlock.forEach((element) => {
+  media.query('mobile', () => element.classList.add('d-none'));
+  media.query('tablet', () => element.classList.add('d-none'));
+  media.query('desktop', () => element.classList.remove('d-none'));
+  
+});
+
+const installAccordion = function() {
+  const acordion = document.querySelectorAll('.acordion-title');
+  acordion.forEach(function (title) {
+      title.onclick = function() {
+          title.closest('.acordion-item').classList.toggle('active');
+      }
+  });
+}
+installAccordion()
+
+
+  
+
