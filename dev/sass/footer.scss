@@ -38,11 +38,21 @@
         li {
             font-size: 16px;
             line-height: 160.5%;
-            text-decoration-line: underline;
-            color: #85899C;
             list-style-type: none;
             margin-bottom: 16px;
+
+            
+
+            & a {
+                text-decoration-line: underline;
+                color: #85899C;
+            }
+
+            & a:hover {
+                color: $primary-color;
+            }
         }
+
     
     }
     &-contacts {

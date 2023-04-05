@@ -826,10 +826,15 @@ ul.slick-dots button:focus {
 .footer-content li {
   font-size: 16px;
   line-height: 160.5%;
-  text-decoration-line: underline;
-  color: #85899C;
   list-style-type: none;
   margin-bottom: 16px;
+}
+.footer-content li a {
+  text-decoration-line: underline;
+  color: #85899C;
+}
+.footer-content li a:hover {
+  color: #E58D35;
 }
 .footer-contacts {
   max-width: 263px;
