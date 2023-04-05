@@ -666,15 +666,16 @@ ul.slick-dots button:focus {
 }
 .questions .questions-content {
   display: flex;
+  justify-content: space-between;
 }
 .questions .acordion {
   max-width: 716px;
-  margin: 20px auto;
   display: grid;
   gap: 15px;
+  margin-right: 20px;
 }
 .questions .acordion-title {
-  padding: 18px 19px 18px 34px;
+  padding: 20px 19px 20px 34px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -695,6 +696,10 @@ ul.slick-dots button:focus {
   overflow: hidden;
   transition: 0.5s;
   color: transparent;
+}
+.questions .svg {
+  width: 20px;
+  height: 20px;
 }
 .questions .acordion-arrow {
   width: 20px;
@@ -1003,6 +1008,14 @@ ul.slick-dots button:focus {
   }
   .about-img img {
     max-width: 325px;
+  }
+  .questions .questions-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .questions .questions-content .acordion {
+    margin-right: 0;
+    margin-bottom: 28px;
   }
   .cooperation-first-block {
     flex-direction: column-reverse;

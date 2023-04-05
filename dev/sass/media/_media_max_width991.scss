@@ -133,6 +133,18 @@
         max-width: 325px;
     }
 
+
+    .questions {
+        .questions-content {
+            flex-wrap: wrap;
+            justify-content: center;
+            .acordion {
+                margin-right: 0;
+                margin-bottom: 28px;
+            }
+        }
+    }
+
     //cooperation//
 
     .cooperation-first-block {
