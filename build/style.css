@@ -679,14 +679,17 @@ ul.slick-dots button:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 124.5%;
-  color: #ffffff;
   border: 1px solid #3A444E;
   border-radius: 10px;
   transition: 0.5s;
   cursor: pointer;
+}
+.questions .acordion-title h6 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 124.5%;
+  color: #ffffff;
+  padding-right: 20px;
 }
 .questions .acordion-content {
   padding: 0 34px;
@@ -716,6 +719,10 @@ ul.slick-dots button:focus {
   color: #363A4D;
   border: none;
 }
+.questions .acordion-item.active h6 {
+  color: #363A4D;
+  border: none;
+}
 .questions .acordion-item.active .acordion-content {
   padding: 0 34px 21px 34px;
   color: #363A4D;
@@ -728,29 +735,28 @@ ul.slick-dots button:focus {
 .questions .form-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   padding: 38px 40px;
   max-width: 390px;
   background-color: #363A4D;
   border-radius: 20px;
+  width: 100%;
 }
 .questions .form-title {
   font-weight: 700;
   font-size: 24px;
-  line-height: 126%;
-  text-align: center;
   margin-bottom: 8px;
 }
 .questions .form-subtitle {
   font-weight: 400;
   font-size: 17px;
   line-height: 126%;
-  text-align: center;
   margin-bottom: 23px;
 }
 .questions .questions-form {
   display: grid;
   gap: 14px;
+  width: 100%;
 }
 .questions .questions-form textarea {
   margin-bottom: 23px;
@@ -953,7 +959,11 @@ ul.slick-dots button:focus {
   }
   .container-fluid {
     border-radius: 0;
-    padding: 0 0 50px 0;
+    padding: 0;
+  }
+  .grey-bg-container {
+    padding: 0;
+    border-radius: 0;
   }
   .slide-item {
     height: calc(100vh - 72px);
@@ -1004,6 +1014,7 @@ ul.slick-dots button:focus {
   }
   .about-text {
     margin: 0 0 25px 0;
+    max-width: 100%;
   }
   .about-text p {
     font-weight: 400;
@@ -1014,6 +1025,9 @@ ul.slick-dots button:focus {
   .about-img img {
     max-width: 325px;
   }
+  .questions {
+    margin-bottom: 60px;
+  }
   .questions .questions-content {
     flex-wrap: wrap;
     justify-content: center;
@@ -1021,6 +1035,12 @@ ul.slick-dots button:focus {
   .questions .questions-content .acordion {
     margin-right: 0;
     margin-bottom: 28px;
+  }
+  .questions .form-container {
+    padding: 38px 20px;
+    width: 335px;
+    align-items: center;
+    text-align: center;
   }
   .cooperation-first-block {
     flex-direction: column-reverse;
@@ -1047,11 +1067,13 @@ ul.slick-dots button:focus {
   }
   .cooperation-text.text-first-block {
     margin-right: 0;
-    margin-bottom: 43px;
   }
   .cooperation-text.text-second-block {
     margin-bottom: 29px;
     margin-right: 0;
+  }
+  .calculation {
+    padding: 50px 0px 60px;
   }
   .calculation .container {
     display: flex;
@@ -1071,10 +1093,19 @@ ul.slick-dots button:focus {
     margin: 15px 0 -18px;
   }
   .advantages .grey-bg-container {
-    border-radius: 0%;
+    border-radius: 0;
   }
   .advantage {
-    padding: 10px 27px;
+    padding: 0px 27px;
+  }
+  .delivery .template-title, .delivery .template-title-left {
+    padding: 70px 20px 0;
+  }
+  ul.slick-dots {
+    margin: 0 auto 0;
+  }
+  .multiple-slider {
+    margin-bottom: 0;
   }
   .template-title h2,
   .template-title-left h2 {
@@ -1125,7 +1156,7 @@ ul.slick-dots button:focus {
     font-size: 16px;
   }
   .multiple-slider {
-    padding: 0;
+    padding: 0 0 50px 0;
     max-width: 360px;
   }
 }

@@ -55,7 +55,12 @@
 
     .container-fluid {
         border-radius: 0;
-        padding: 0 0 50px 0;
+        padding: 0;
+    }
+
+    .grey-bg-container {
+        padding: 0;
+        border-radius: 0;
     }
 
     // slick-slide navigation //
@@ -120,6 +125,7 @@
 
     .about-text {
         margin: 0 0 25px 0;
+        max-width: 100%;
     }
 
     .about-text p {
@@ -135,6 +141,8 @@
 
 
     .questions {
+        margin-bottom: 60px;
+
         .questions-content {
             flex-wrap: wrap;
             justify-content: center;
@@ -142,6 +150,14 @@
                 margin-right: 0;
                 margin-bottom: 28px;
             }
+        }
+
+        .form-container {
+            padding: 38px 20px;
+            width: 335px;
+            align-items: center;
+            text-align: center;
+           
         }
     }
 
@@ -175,8 +191,8 @@
         text-align: justify;
         &.text-first-block {
             margin-right: 0;
-            margin-bottom: 43px;
         }
+        
         &.text-second-block {
             margin-bottom: 29px;
             margin-right: 0;
@@ -184,6 +200,10 @@
     }
 
     //calculation//
+
+    .calculation {
+        padding: 50px 0px 60px;
+    }
 
     .calculation .container {
         display: flex;
@@ -207,12 +227,30 @@
     .advantages {
         margin: 15px 0 -18px;
         .grey-bg-container {
-            border-radius: 0%;
+            border-radius: 0;
         }
     }
 
     .advantage {
-        padding: 10px 27px;
+        padding: 0px 27px;
+    }
+
+    // delivery //
+
+    .delivery {
+        .template-title {
+            padding: 70px 20px 0;
+        }
+    }
+
+    ul.slick-dots {
+        margin: 0 auto 0;
+    }
+
+    // services //
+
+    .multiple-slider {
+        margin-bottom: 0;
     }
 
     //templates//
@@ -262,6 +300,8 @@
         }
 
     }
+
+    // footer //
 
     .footer-contacts {
         margin: auto;
